@@ -10,16 +10,16 @@ public class FrameTest extends BaseTestClass {
     @DataProvider
     public Object[][] frameData() {
         return new Object[][] {
-                {"frame-left", "LEFT"},
-                {"frame-middle", "MIDDLE"},
-                {"frame-right", "RIGHT"}
+                {"frame-top","frame-left", "LEFT"},
+                {"frame-top","frame-middle", "MIDDLE"},
+                {"frame-top","frame-right", "RIGHT"}
         };
     }
 
     @Test(dataProvider = "frameData" )
-    public void allFrames(String frame, String expectedResult){
+    public void allFrames(String top, String frame, String expectedResult){
         driver.get(URL);
-        driver.switchTo().frame("frame-top");
+        driver.switchTo().frame(top);
         driver.switchTo().frame(frame);
 
         String body = driver.findElement(By.xpath("//body")).getText();
