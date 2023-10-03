@@ -2,12 +2,6 @@ package framesTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.annotations.*;
-import java.util.List;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FrameTest extends BaseTestClass {
     String URL = "https://the-internet.herokuapp.com/nested_frames";
